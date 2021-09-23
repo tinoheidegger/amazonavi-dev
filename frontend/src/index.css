@@ -173,6 +173,9 @@ img.medium {
   color: #404040;
 }
 /* alart */
+.loading {
+  display: block !important;
+}
 .success {
   color: #20a020;
 }
