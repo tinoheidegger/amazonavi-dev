@@ -1,22 +1,35 @@
+import bcrypt from "bcryptjs";
+
 const data = {
+  users: [
+    {
+      name: "tino",
+      email: "admin@admin.com",
+      password: bcrypt.hashSync("tino", 8),
+      isAdmin: true,
+    },
+    {
+      name: "tino1",
+      email: "tino1@example.com",
+      password: bcrypt.hashSync("tino1", 8),
+      isAdmin: false,
+    },
+  ],
+
   products: [
     {
-      _id: "1",
       name: "Nike Slim Shirt",
-      slug: "nike-slim-shirt",
       category: "Shirts",
       image: "/images/nike-p1.jpg",
       price: 90,
-      brand: "Lacoste",
+      brand: "Raymond",
       rating: 4.5,
       numReviews: 10,
       countInStock: 10,
       description: "A popular shirt",
     },
     {
-      _id: "2",
       name: "Golf Pants",
-      slug: "golf-pants",
       category: "Pants",
       image: "/images/pants1.jpg",
       price: 190,
@@ -27,22 +40,18 @@ const data = {
       description: "High quality product",
     },
     {
-      _id: "3",
       name: "Beautiful Shirt",
-      slug: "beautiful-shirt",
       category: "Shirts",
       image: "/images/slim-p3.jpg",
       price: 100,
       brand: "Raymond",
       rating: 4.8,
       numReviews: 17,
-      countInStock: 0,
+      countInStock: 7,
       description: "A popular shirt",
     },
     {
-      _id: "4",
       name: "Fit Pants",
-      slug: "fit-pants",
       category: "Pants",
       image: "/images/fit-pants.jpg",
       price: 150,
@@ -53,9 +62,7 @@ const data = {
       description: "A High quality pants",
     },
     {
-      _id: "5",
       name: " Slim Shirt",
-      slug: "slim-shirt",
       category: "Shirts",
       image: "/images/shirt5.jpg",
       price: 90,
@@ -66,9 +73,7 @@ const data = {
       description: "A popular shirt",
     },
     {
-      _id: "6",
       name: "Choco Pants",
-      slug: "choco-pants",
       category: "Pants",
       image: "/images/pants6.jpg",
       price: 70,
