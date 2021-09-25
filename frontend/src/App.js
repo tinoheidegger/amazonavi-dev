@@ -7,6 +7,10 @@ import { useDispatch, useSelector } from "react-redux";
 import SigninScreen from "./screen/SigninScreen";
 import { signout } from "./actions/userActions";
 import RegisterScreen from "./screen/RegisterScreen";
+import ShippingAddressScreen from "./screen/ShippingAddressScreen";
+import PaymentMethodScreen from "./screen/PaymentMethodScreen";
+import PlaceOrderScreen from "./screen/PlaceOrderScreen";
+import OrderScreen from "./screen/OrderScreen";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -58,6 +62,14 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route>
           <Route path="/signin" component={SigninScreen} exact></Route>
           <Route path="/register" component={RegisterScreen} exact></Route>
+          <Route
+            path="/shipping"
+            component={ShippingAddressScreen}
+            exact
+          ></Route>
+          <Route path="/payment" component={PaymentMethodScreen} exact></Route>
+          <Route path="/placeorder" component={PlaceOrderScreen} exact></Route>
+          <Route path="/order/:id" component={OrderScreen} exact></Route>
         </main>
         <footer className="row center">All rights reserved. Amazonavi</footer>
       </div>
